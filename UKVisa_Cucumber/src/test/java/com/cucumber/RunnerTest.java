@@ -12,11 +12,12 @@ import cucumber.api.junit.Cucumber;
 		monochrome=true,
 		features= {"src/test/resources/"},
 		glue= {"com.cucumber"},
+		//tags= {"@JapanTourismVisa"},
 		plugin= {
 				"html:target/site/cucumber-html",
 				"json:target/cucumber1.json"
 				}
-		//tags= {"@ShopOnEbay"}
+		
 		
 		)
 public class RunnerTest {

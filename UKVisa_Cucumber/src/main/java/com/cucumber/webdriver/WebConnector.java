@@ -74,6 +74,8 @@ public class WebConnector {
 	
 	// function to check object's location using name
 	public WebElement getObject(String objectkey) {
+		//System.out.println("value from click class: " + objectkey );
+		//System.out.println("value came from property file: " + pro.getProperty(objectkey));
 		WebElement e = null;
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		try {
@@ -96,6 +98,7 @@ public class WebConnector {
 	
 	// function to click on object
 		public void click(String objectkey) {
+			//System.out.println("value of objectkey: " + objectkey);
 			getObject(objectkey).click();
 			
 		}
@@ -132,7 +135,10 @@ public class WebConnector {
 			// function to validate output
 			public void validateMessage(String objectkey, String Expected_Result) {
 				String actualResult = getObject(objectkey).getText();
-				String Actual_Result = actualResult.replace("’", " wi");
+				System.out.println("Message from website: " + actualResult);
+				System.out.println("Meesage from features: " + Expected_Result );
+				String Actual_Result = actualResult.replace("You’ll", "You will");
+			    Actual_Result = Actual_Result.replace("won’t", "will not");
 				System.out.println("Visa Information : " + Actual_Result);
 			
 				Assert.assertEquals(Expected_Result, Actual_Result);

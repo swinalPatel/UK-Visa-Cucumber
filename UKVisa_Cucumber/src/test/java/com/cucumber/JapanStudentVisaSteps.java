@@ -1,6 +1,10 @@
 package com.cucumber;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import com.cucumber.webdriver.WebConnector;
+import com.google.inject.spi.Element;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -26,10 +30,10 @@ public class JapanStudentVisaSteps {
 		
 	}
 	
-	@After
-	public void closeTheApplication() {
-		conn.closeBrowser();
-	}
+//	@After     //TODO
+//	public void closeTheApplication() {
+//		conn.closeBrowser();
+//	}
 	
 	@Given("^I provide a nationality of (.*)$")
 	public void provide_nationality(String countryname) {
@@ -51,18 +55,26 @@ public class JapanStudentVisaSteps {
 	public void intend_to_stay(String duration) {
 		
 		conn.selectFromRadioButton("ukVisaDurationRadioButtons_xpath", duration);
-		
+		conn.click("nextStep_xpath");
 	}
 	
 	@When("^I submit the form$")
 	public void submit() {
+		System.out.println("i submit the form ");
+		//conn.click("nextStep_xpath");
 		
-		conn.click("nextStep_xpath");
 	}
 	
 	@Then("^I will be informed that (.*)$")
 	public void visa_information(String message) {
 		
 		conn.validateMessage("visaInformationMessage_xpath",message);
+	}
+	
+	@And("^I state (.*) I am not travelling or visiting a partner or family$")
+	public void reason_to_travel(String answer) {
+		System.out.println(answer+ " I am not travelling or visiting a partner or family");
+		conn.selectFromRadioButton("RadioButtons_xpath", answer);
+		conn.click("nextStep_xpath");
 	}
 }

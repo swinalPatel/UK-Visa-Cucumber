@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 6758590400,
+              "duration": 7714342400,
               "status": "passed"
             },
             "match": {
@@ -14,30 +14,19 @@
             }
           }
         ],
-        "line": 3,
-        "name": "UK student visa information",
+        "line": 8,
+        "name": "UK visa information for Japan Student",
         "description": "",
-        "id": "confirm-whether-a-visa-is-required-to-visit-the-uk;uk-student-visa-information",
-        "after": [
-          {
-            "result": {
-              "duration": 1333381600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "JapanStudentVisaSteps.closeTheApplication()"
-            }
-          }
-        ],
+        "id": "confirm-whether-a-visa-is-required-to-visit-the-uk;uk-visa-information-for-japan-student",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 637325000,
+              "duration": 727481400,
               "status": "passed"
             },
-            "line": 4,
+            "line": 9,
             "name": "I provide a nationality of Japan",
             "match": {
               "arguments": [
@@ -52,10 +41,10 @@
           },
           {
             "result": {
-              "duration": 685648100,
+              "duration": 713919400,
               "status": "passed"
             },
-            "line": 5,
+            "line": 10,
             "name": "I select the reason Study",
             "match": {
               "arguments": [
@@ -70,10 +59,10 @@
           },
           {
             "result": {
-              "duration": 275870200,
+              "duration": 743337100,
               "status": "passed"
             },
-            "line": 6,
+            "line": 11,
             "name": "I state I am intending to stay for longer than 6 months",
             "match": {
               "arguments": [
@@ -88,10 +77,10 @@
           },
           {
             "result": {
-              "duration": 301163300,
+              "duration": 1316500,
               "status": "passed"
             },
-            "line": 7,
+            "line": 12,
             "name": "I submit the form",
             "match": {
               "location": "JapanStudentVisaSteps.submit()"
@@ -100,10 +89,10 @@
           },
           {
             "result": {
-              "duration": 82025200,
+              "duration": 926813500,
               "status": "passed"
             },
-            "line": 8,
+            "line": 13,
             "name": "I will be informed that You will need a visa to study in the UK",
             "match": {
               "arguments": [
@@ -115,6 +104,213 @@
               "location": "JapanStudentVisaSteps.visa_information(String)"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@JapanStudyVisa"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6988304600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "JapanStudentVisaSteps.openTheApplication()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "UK visa information for Japan Tourism",
+        "description": "",
+        "id": "confirm-whether-a-visa-is-required-to-visit-the-uk;uk-visa-information-for-japan-tourism",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 799954600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I provide a nationality of Japan",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Japan",
+                  "offset": 27
+                }
+              ],
+              "location": "JapanStudentVisaSteps.provide_nationality(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1002818300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I select the reason Tourism",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Tourism",
+                  "offset": 20
+                }
+              ],
+              "location": "JapanStudentVisaSteps.select_reason(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 382300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I submit the form",
+            "match": {
+              "location": "JapanStudentVisaSteps.submit()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 99946600,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I will be informed that You will not need a visa to come to the UK",
+            "match": {
+              "arguments": [
+                {
+                  "val": "You will not need a visa to come to the UK",
+                  "offset": 24
+                }
+              ],
+              "location": "JapanStudentVisaSteps.visa_information(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@JapanTourismVisa"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 7150791400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "JapanStudentVisaSteps.openTheApplication()"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "UK visa information for Russia Tourism",
+        "description": "",
+        "id": "confirm-whether-a-visa-is-required-to-visit-the-uk;uk-visa-information-for-russia-tourism",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 807757300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I provide a nationality of Russia",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Russia",
+                  "offset": 27
+                }
+              ],
+              "location": "JapanStudentVisaSteps.provide_nationality(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 758424200,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I select the reason Tourism",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Tourism",
+                  "offset": 20
+                }
+              ],
+              "location": "JapanStudentVisaSteps.select_reason(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 679858300,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I state No I am not travelling or visiting a partner or family",
+            "match": {
+              "arguments": [
+                {
+                  "val": "No",
+                  "offset": 8
+                }
+              ],
+              "location": "JapanStudentVisaSteps.reason_to_travel(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 684000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I submit the form",
+            "match": {
+              "location": "JapanStudentVisaSteps.submit()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 95552500,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I will be informed that You will need a visa to come to the UK",
+            "match": {
+              "arguments": [
+                {
+                  "val": "You will need a visa to come to the UK",
+                  "offset": 24
+                }
+              ],
+              "location": "JapanStudentVisaSteps.visa_information(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RussiaTourismVisa"
           }
         ]
       }

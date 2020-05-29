@@ -5,9 +5,14 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "UK student visa information",
+  "name": "UK visa information for Japan Student",
   "description": "",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@JapanStudyVisa"
+    }
+  ]
 });
 formatter.before({
   "status": "passed"
@@ -62,7 +67,120 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
-formatter.after({
+formatter.scenario({
+  "name": "UK visa information for Japan Tourism",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@JapanTourismVisa"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I provide a nationality of Japan",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "JapanStudentVisaSteps.provide_nationality(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I select the reason Tourism",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "JapanStudentVisaSteps.select_reason(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I submit the form",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "JapanStudentVisaSteps.submit()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I will be informed that You will not need a visa to come to the UK",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "JapanStudentVisaSteps.visa_information(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "UK visa information for Russia Tourism",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@RussiaTourismVisa"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I provide a nationality of Russia",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "JapanStudentVisaSteps.provide_nationality(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I select the reason Tourism",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "JapanStudentVisaSteps.select_reason(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I state No I am not travelling or visiting a partner or family",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "JapanStudentVisaSteps.reason_to_travel(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I submit the form",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "JapanStudentVisaSteps.submit()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I will be informed that You will need a visa to come to the UK",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "JapanStudentVisaSteps.visa_information(String)"
+});
+formatter.result({
   "status": "passed"
 });
 });
