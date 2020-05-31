@@ -137,8 +137,8 @@ public class WebConnector {
 				String actualResult = getObject(objectkey).getText();
 				System.out.println("Message from website: " + actualResult);
 				System.out.println("Meesage from features: " + Expected_Result );
-				String Actual_Result = actualResult.replace("You’ll", "You will");
-			    Actual_Result = Actual_Result.replace("won’t", "will not");
+				String Actual_Result = actualResult.replace("Youâ€™ll", "You will");
+			    Actual_Result = Actual_Result.replace("wonâ€™t", "will not");
 				System.out.println("Visa Information : " + Actual_Result);
 			
 				Assert.assertEquals(Expected_Result, Actual_Result);

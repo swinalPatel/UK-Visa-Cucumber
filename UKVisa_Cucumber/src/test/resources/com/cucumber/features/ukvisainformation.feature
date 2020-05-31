@@ -18,6 +18,7 @@ Given I provide a nationality of Japan
 And I select the reason Tourism
 When I submit the form
 Then I will be informed that You will not need a visa to come to the UK
+#Then I will be informed that You will not need a visa to study in the UK
 
 @RussiaTourismVisa
 Scenario: UK visa information for Russia Tourism
