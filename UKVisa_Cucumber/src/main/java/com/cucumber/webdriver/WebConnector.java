@@ -142,6 +142,7 @@ public class WebConnector {
 				System.out.println("Visa Information : " + Actual_Result);
 			
 				Assert.assertEquals(Expected_Result, Actual_Result);
+				
 				}
 
 			// function to close the browser
